@@ -1,11 +1,11 @@
 using Godot;
 using System;
 
-public partial class WorldGen : TileMapLayer
+public partial class Chunk : TileMapLayer
 {
     [Export] private int mapWidth = 100;
     [Export] private int mapHeight = 100;
-    [Export] private float noiseScale = 0.01f;
+    [Export] private float noiseScale = 0.03f;
     [Export] private int seed = (int) GD.Randi();
 
     [Export] private Vector2 noiseOffset = new Vector2(100, 200);
@@ -18,15 +18,7 @@ public partial class WorldGen : TileMapLayer
         GD.Print("WorldGen v1.0, placed seed: "+seed);
         GenerateMap();
     }
-
-    public override void _Process(double delta)
-    {
-        if (Input.IsActionJustPressed("w"))
-        {
-            noiseScale += 0.01f;
-            GenerateMap();
-        }
-    }
+    
 
     private void GenerateMap()
     {
@@ -54,8 +46,6 @@ public partial class WorldGen : TileMapLayer
                 SetCell(new Vector2I(x, y), 1, tileId); 
             }
         }
-
-        GD.Print(GetCellAtlasCoords(Vector2I.One));
     }
 
     private Vector2I GetTileByTemperature(float t)

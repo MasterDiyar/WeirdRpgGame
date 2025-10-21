@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://crprihiyvlko"]
+
+[ext_resource type="PackedScene" uid="uid://dxu50535w2l2d" path="res://scene/worldgen/world_gen.tscn" id="1_dbls1"]
+[ext_resource type="PackedScene" uid="uid://c0e43lpgicsp1" path="res://scene/gorfena.tscn" id="2_33cqm"]
+
+[node name="game" type="Node2D"]
+
+[node name="WorldGen" parent="." instance=ExtResource("1_dbls1")]
+
+[node name="Gorfena" parent="." instance=ExtResource("2_33cqm")]
