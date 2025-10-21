@@ -1,0 +1,32 @@
+<Project Sdk="Godot.NET.Sdk/4.5.1">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework Condition=" '$(GodotTargetPlatform)' == 'android' ">net9.0</TargetFramework>
+    <EnableDynamicLoading>true</EnableDynamicLoading>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="code\building\" />
+    <Folder Include="code\item\" />
+    <Folder Include="code\jsonloader\" />
+    <Folder Include="code\mob\" />
+    <Folder Include="code\other\" />
+    <Folder Include="jsons\" />
+    <Folder Include="save\" />
+    <Folder Include="scene\other\" />
+    <Folder Include="scene\player\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="image\lalka1.png" />
+    <Content Include="image\lalka1.png.import" />
+    <Content Include="image\lalka2.png" />
+    <Content Include="image\lalka2.png.import" />
+    <Content Include="image\lalka3.png" />
+    <Content Include="image\lalka3.png.import" />
+    <Content Include="image\lalka4.png" />
+    <Content Include="image\lalka4.png.import" />
+    <Content Include="image\slime.png" />
+    <Content Include="image\slime.png.import" />
+    <Content Include="scene\gorfena.tscn" />
+    <Content Include="scene\movement.tscn" />
+  </ItemGroup>
+</Project>

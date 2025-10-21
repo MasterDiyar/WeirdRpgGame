@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=4 uid="uid://dxu50535w2l2d"]
+
+[ext_resource type="Texture2D" uid="uid://dogbp0evlapor" path="res://image/priroda/littlegrass.png" id="1_30dig"]
+[ext_resource type="Script" uid="uid://bnqb4mvttxews" path="res://code/worldgen/WorldGen.cs" id="1_kbxxi"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f8uki"]
+texture = ExtResource("1_30dig")
+0:0/0 = 0
+1:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_30dig"]
+sources/1 = SubResource("TileSetAtlasSource_f8uki")
+
+[node name="WorldGen" type="TileMapLayer"]
+tile_map_data = PackedByteArray("AAACAAEAAQAAAAAAAAABAAMAAQAAAAAAAAACAAQAAQAAAAAAAAADAAQAAQAAAAAAAAAEAAQAAQAAAAAAAAAFAAMAAQAAAAAAAAAEAAEAAQAAAAAAAAA=")
+tile_set = SubResource("TileSet_30dig")
+script = ExtResource("1_kbxxi")
