@@ -5,15 +5,7 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="code\building\" />
-    <Folder Include="code\item\" />
-    <Folder Include="code\jsonloader\" />
-    <Folder Include="code\mob\" />
-    <Folder Include="code\other\" />
-    <Folder Include="jsons\" />
-    <Folder Include="save\" />
     <Folder Include="scene\other\" />
-    <Folder Include="scene\player\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="image\lalka1.png" />
@@ -26,7 +18,9 @@
     <Content Include="image\lalka4.png.import" />
     <Content Include="image\slime.png" />
     <Content Include="image\slime.png.import" />
+    <Content Include="jsons\player.json" />
+    <Content Include="save\new_world.txt" />
     <Content Include="scene\gorfena.tscn" />
-    <Content Include="scene\movement.tscn" />
+    <Content Include="scene\player\movement.tscn" />
   </ItemGroup>
 </Project>
