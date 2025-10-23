@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtm7sw5h5inq6"]
+
+[ext_resource type="Script" uid="uid://sn0bykbt850p" path="res://code/building/Construction.cs" id="1_kdusb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf2xj"]
+
+[node name="Construction" type="StaticBody2D"]
+script = ExtResource("1_kdusb")
+
+[node name="coll" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bf2xj")
+
+[node name="Icon" type="Sprite2D" parent="."]

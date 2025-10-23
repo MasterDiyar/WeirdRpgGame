@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4c022yaspsym"]
+
+[ext_resource type="Script" uid="uid://b5rim3v5stek1" path="res://code/item/Item.cs" id="1_4clue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nkwn6"]
+size = Vector2(16, 16)
+
+[node name="Item" type="Node2D"]
+script = ExtResource("1_4clue")
+
+[node name="HandleArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HandleArea"]
+shape = SubResource("RectangleShape2D_nkwn6")
+
+[node name="Icon" type="Sprite2D" parent="."]

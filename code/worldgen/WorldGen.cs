@@ -3,19 +3,19 @@ using System;
 
 public partial class WorldGen : TileMapLayer
 {
-    [Export] private int mapWidth = 100;
-    [Export] private int mapHeight = 100;
+    [Export] private int   mapWidth   = 100;
+    [Export] private int   mapHeight  = 100;
     [Export] private float noiseScale = 0.01f;
-    [Export] private int seed = (int) GD.Randi();
+    [Export] public  int   Seed       = (int) GD.Randi();
 
-    [Export] private Vector2 noiseOffset = new Vector2(100, 200);
+    [Export] public Vector2 noiseOffset = new Vector2(100, 200);
 
     private FastNoiseLite noise, tempNoise;
 
     public override void _Ready()
     {
         base._Ready();
-        GD.Print("WorldGen v1.0, placed seed: "+seed);
+        GD.Print("WorldGen v1.0, placed seed: "+Seed);
         GenerateMap();
     }
 
@@ -34,8 +34,8 @@ public partial class WorldGen : TileMapLayer
         noise = new FastNoiseLite(); 
         tempNoise = new FastNoiseLite();
         
-        noise.SetSeed(seed); 
-        tempNoise.SetSeed(seed+1);
+        noise.SetSeed(Seed); 
+        tempNoise.SetSeed(Seed+1);
         
         noise.NoiseType = FastNoiseLite.NoiseTypeEnum.Perlin;
         tempNoise.NoiseType = FastNoiseLite.NoiseTypeEnum.Perlin;

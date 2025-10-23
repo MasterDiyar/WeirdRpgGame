@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=3 uid="uid://c0e43lpgicsp1"]
+
+[ext_resource type="Script" uid="uid://brw6sr77soykr" path="res://code/Player/Gorfena.cs" id="1_wka5v"]
+[ext_resource type="Texture2D" uid="uid://og67b7smcgm6" path="res://image/lalka1.png" id="2_3rmx7"]
+[ext_resource type="Texture2D" uid="uid://d2ngbti8kb122" path="res://image/lalka2.png" id="3_2d0ix"]
+[ext_resource type="Texture2D" uid="uid://dop1nowj4avtc" path="res://image/lalka3.png" id="4_t2jhl"]
+[ext_resource type="Texture2D" uid="uid://dyk0yp3v8gs0g" path="res://image/lalka4.png" id="5_c82ku"]
+[ext_resource type="PackedScene" uid="uid://7nufy6wqpmp8" path="res://scene/player/movement.tscn" id="6_5f18f"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6gfqj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_3rmx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_2d0ix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_t2jhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c82ku")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Gorfena" type="Node2D" node_paths=PackedStringArray("Animation")]
+texture_filter = 3
+script = ExtResource("1_wka5v")
+Animation = NodePath("AnimatedSprite2D")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_6gfqj")
+frame_progress = 0.7798384
+
+[node name="Movement" parent="." node_paths=PackedStringArray("parent") instance=ExtResource("6_5f18f")]
+parent = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 30.0

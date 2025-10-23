@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://djlryc8m52f6l"]
+[gd_scene load_steps=3 format=3 uid="uid://djlryc8m52f6l"]
+
+[ext_resource type="Script" uid="uid://b1u75js0ndihe" path="res://code/worldgen/MapWorld.cs" id="1_bymy5"]
+[ext_resource type="PackedScene" uid="uid://c0e43lpgicsp1" path="res://scene/player/gorfena.tscn" id="2_ci8su"]
 
 [node name="MapWorld" type="Node2D"]
+script = ExtResource("1_bymy5")
+
+[node name="Gorfena" parent="." instance=ExtResource("2_ci8su")]
+z_index = 1024

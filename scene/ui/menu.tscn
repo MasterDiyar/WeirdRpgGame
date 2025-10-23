@@ -5,3 +5,8 @@
 [node name="menu" type="Node2D"]
 
 [node name="RefButton" parent="." instance=ExtResource("1_rsrr4")]
+offset_left = 640.0
+offset_top = 420.0
+offset_right = 1091.0
+offset_bottom = 559.0
+text = "Play"

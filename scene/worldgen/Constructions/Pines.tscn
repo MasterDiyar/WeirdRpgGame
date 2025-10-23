@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://0t8ckbvrv2l4"]
+
+[ext_resource type="PackedScene" uid="uid://dtm7sw5h5inq6" path="res://scene/worldgen/Constructions/construction.tscn" id="1_i0cog"]
+[ext_resource type="Texture2D" uid="uid://ds2tka4y3bo84" path="res://image/priroda/tree.png" id="2_id3yq"]
+
+[node name="Pine" instance=ExtResource("1_i0cog")]
+texture_filter = 3
+
+[node name="Icon" parent="." index="1"]
+texture = ExtResource("2_id3yq")
